@@ -13,7 +13,7 @@ import com.facebook.react.bridge.JavaScriptModule;
 public class RNUrlResolverPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-      return Arrays.<NativeModule>asList(new RNReactNativeUrlResolverModule(reactContext));
+      return Arrays.<NativeModule>asList(new RNUrlResolverModule(reactContext));
     }
 
     @Override

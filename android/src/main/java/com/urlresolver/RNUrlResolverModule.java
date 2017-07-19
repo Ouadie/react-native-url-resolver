@@ -16,7 +16,7 @@ public class RNUrlResolverModule extends ReactContextBaseJavaModule {
 
     private final ReactApplicationContext reactContext;
 
-    public RNReactNativeUrlResolverModule(ReactApplicationContext reactContext) {
+    public RNUrlResolverModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
     }
