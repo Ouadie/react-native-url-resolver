@@ -10,6 +10,6 @@ $ react-native link react-native-url-resolver
 
 # Usage
 ```
-import urlResolver from 'react-native-url-resolver';
-const url = await urlResolver.resolve('http://link.your-website.com/wf/click?upn=2BpJel-2FskgqgVk-2FpxfUI2LQoBBIQ');
+import { resolveUrl } from 'react-native-url-resolver';
+const url = await resolveUrl('http://link.your-website.com/wf/click?upn=2BpJel-2FskgqgVk-2FpxfUI2LQoBBIQ');
 ```
