@@ -34,8 +34,12 @@ public class RNUrlResolverModule extends ReactContextBaseJavaModule {
                     URL originalURL = new URL(url);
                     HttpURLConnection ucon = (HttpURLConnection) originalURL.openConnection();
                     ucon.setInstanceFollowRedirects(false);
-                    URL resolvedURL = new URL(ucon.getHeaderField("Location"));
-                    promise.resolve(resolvedURL.toString());
+                    String location = ucon.getHeaderField("Location");
+                    if (location == null) promise.resolve(originalURL.toString());
+                    else {
+                        URL resolvedURL = new URL(location);
+                        promise.resolve(resolvedURL.toString());
+                    }
                 }
                 catch (MalformedURLException ex) {
                     Log.e("App Link",Log.getStackTraceString(ex));
